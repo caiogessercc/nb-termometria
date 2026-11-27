@@ -1,11 +1,13 @@
 {
-    "name": "NB Termometria",
+    "id": "/",
+    "name": "NB Termometria (projeto acadêmico)",
     "short_name": "NB Termometria",
-    "description": "Equipamentos de termometria para silos e armazéns de grãos.",
+    "description": "Projeto acadêmico da Unesc. Não é o site oficial da empresa.",
     "lang": "pt-BR",
+    "dir": "ltr",
     "start_url": "/",
     "scope": "/",
-    "display": "standalone",
+    "display": "browser",
     "background_color": "#ffffff",
     "theme_color": "#0b3d6b",
     "icons": [
