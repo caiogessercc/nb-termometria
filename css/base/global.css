@@ -66,3 +66,8 @@ button {
         transition-duration: 0.01ms !important;
     }
 }
+
+.lazy-section {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 600px;
+}
