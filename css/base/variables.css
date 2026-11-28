@@ -1,0 +1,101 @@
+/*
+ * Ordem das camadas, da menor para a maior prioridade.
+ * Este arquivo DEVE ser o primeiro <link> de cada página: é ele que fixa a ordem.
+ * Breakpoints (media query não aceita variável): 37.5em (600px), 56.25em (900px)
+ * e 75em (1200px), mobile-first, sempre com min-width / width >=.
+ */
+@layer reset, tokens, base, layout, components, utilities;
+
+@layer tokens {
+    :root {
+        color-scheme: light;
+
+        /* Primitivos: valores brutos. Componentes NÃO usam estes diretamente. */
+        --blue-50: #eef5fb;
+        --blue-600: #0b5fa5;
+        --blue-700: #0b3d6b;
+        --blue-900: #072743;
+        --gray-0: #ffffff;
+        --gray-50: #f4f6f8;
+        --gray-300: #c5ccd3;
+        --gray-500: #7a8590;
+        --gray-700: #5b6670;
+        --gray-900: #1b1f23;
+        --red-700: #b42318;
+        --green-700: #067647;
+        --amber-700: #b54708;
+
+        /* Cores semânticas: é o que os componentes usam. Trocar identidade = remapear aqui. */
+        --color-primary: var(--blue-700);
+        --color-primary-hover: var(--blue-900);
+        --color-on-primary: var(--gray-0);
+        --color-accent: var(--amber-700);
+        --color-on-accent: var(--gray-0);
+        --color-text: var(--gray-900);
+        --color-text-muted: var(--gray-700);
+        --color-surface: var(--gray-0);
+        --color-surface-alt: var(--gray-50);
+        --color-surface-tint: var(--blue-50);
+        --color-border: var(--gray-300);
+        --color-border-strong: var(--gray-500);
+        --color-link: var(--blue-600);
+        --color-link-hover: var(--blue-700);
+        --color-focus: var(--blue-600);
+        --color-success: var(--green-700);
+        --color-warning: var(--amber-700);
+        --color-danger: var(--red-700);
+        --color-overlay: rgb(7 39 67 / 0.6);
+
+        /* Tipografia */
+        --font-family-base:
+            system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+        --font-family-mono: ui-monospace, "Cascadia Code", Consolas, monospace;
+        --font-size-sm: 0.875rem;
+        --font-size-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+        --font-size-lg: clamp(1.125rem, 1.05rem + 0.4vw, 1.25rem);
+        --font-size-xl: clamp(1.25rem, 1.1rem + 0.75vw, 1.5rem);
+        --font-size-2xl: clamp(1.5rem, 1.2rem + 1.5vw, 2rem);
+        --font-size-3xl: clamp(1.875rem, 1.4rem + 2.4vw, 3rem);
+        --font-weight-regular: 400;
+        --font-weight-medium: 500;
+        --font-weight-bold: 700;
+        --line-height-tight: 1.2;
+        --line-height-base: 1.6;
+        --measure: 65ch;
+
+        /* Espaçamento: escala fechada, única fonte de valores */
+        --space-1: 0.25rem;
+        --space-2: 0.5rem;
+        --space-3: 1rem;
+        --space-4: 1.5rem;
+        --space-5: 2rem;
+        --space-6: 3rem;
+        --space-7: 4rem;
+
+        /* Raios e sombras */
+        --radius-1: 0.25rem;
+        --radius-2: 0.75rem;
+        --radius-3: 1.25rem;
+        --radius-round: 9999px;
+        --shadow-1: 0 1px 3px rgb(0 0 0 / 0.12);
+        --shadow-2: 0 4px 12px rgb(0 0 0 / 0.15);
+        --shadow-3: 0 12px 32px rgb(0 0 0 / 0.2);
+
+        /* Camadas de empilhamento (z-index) */
+        --z-header: 10;
+        --z-dropdown: 20;
+        --z-modal: 40;
+        --z-skip-link: 100;
+
+        /* Layout, acessibilidade e movimento */
+        --header-height: 4rem;
+        --container-max: 75rem;
+        --container-padding: var(--space-3);
+        --target-size: 2.75rem;
+        --border-width: 1px;
+        --focus-width: 3px;
+        --focus-offset: 2px;
+        --duration-base: 250ms;
+        --easing-standard: cubic-bezier(0.2, 0, 0, 1);
+    }
+}
